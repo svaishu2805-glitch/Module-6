@@ -1,35 +1,39 @@
-# 🐍 Python OOP: Abstract Class & Method Example
+# 🐟 Method Overriding-Fish and Shark Class Inheritance in Python
 
-## 🎯 AIM
+## 🧠 AIM:
+To write a Python program that demonstrates class inheritance by creating a parent class `Fish` with a method `type`, and a child class `Shark` that overrides the `type` method.
 
-To create an **abstract class** named `Shape` with an **abstract method** `calculate_area`, and implement this method in two subclasses: `Rectangle` and `Circle`.
+## 📋 ALGORITHM:
 
----
+1. Define the `Fish` class with a method named `type()` that prints `"fish"`.
+2. Define the `Shark` class as a subclass of `Fish`, and override the `type()` method to print `"shark"`.
+3. Create an instance of the `Fish` class named `obj_goldfish`.
+4. Create an instance of the `Shark` class named `obj_hammerhead`.
+5. Use a `for` loop to iterate over both objects.
+6. Within the loop, call the `type()` method using the loop variable.
+7. Output will demonstrate method overriding: printing `"fish"` and `"shark"` accordingly.
 
-## 🧠 ALGORITHM
+## 💻 PROGRAM:
 
-1. **Import ABC module**:
-   - Use `from abc import ABC, abstractmethod` to define abstract classes and methods.
+```
+class Fish:
+    def type(self):
+        print("fish")
 
-2. **Create Abstract Class `Shape`**:
-   - Define an abstract method `calculate_area()` with `@abstractmethod`.
 
-3. **Create Subclass `Rectangle`**:
-   - Set default values for `length` and `breadth`.
-   - Override `calculate_area()` to compute the rectangle area.
+class Shark(Fish):
+    def type(self):
+        print("shark")
 
-4. **Create Subclass `Circle`**:
-   - Set default value for `radius`.
-   - Override `calculate_area()` to compute the circle area.
 
-5. **Create Objects & Call Methods**:
-   - Instantiate `Rectangle` and `Circle`.
-   - Call their `calculate_area()` methods.
+obj_goldfish = Fish()
+obj_hammerhead = Shark()
 
----
+obj_goldfish.type()
+obj_hammerhead.type()
+```
+## OUTPUT
+![image](https://github.com/user-attachments/assets/fc84bcbd-4502-44b2-bd78-396bdd996d19)
 
-## 💻 Program
-
-## Output
-
-## Result
+## RESULT
+Thus,the program is executed successfully.
